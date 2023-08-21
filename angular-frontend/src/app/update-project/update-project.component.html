@@ -1,0 +1,54 @@
+<div class="col-md-6 offset-md-3">
+    <h3> Atualizar Projeto </h3>
+    <form (ngSubmit) = "onSubmit()">
+        <div class="form-group">
+            <label>Nome </label>
+            <input type="text" class="form-control" id="nome"
+                [(ngModel)] = "projeto.nome" name = "nome">
+        </div>
+    
+        <div class="form-group">
+            <label>Responsável </label>
+            <input type="text" class="form-control" id="responsavel"
+                [(ngModel)] = "projeto.responsavel" name = "responsavel">
+        </div>
+    
+        <div class="form-group">
+            <label>Data Início </label>
+            <input type="text" class="form-control" id="dataInicio"
+                [(ngModel)] = "projeto.dataInicio" name = "dataInicio">
+        </div>
+    
+        <div class="form-group">
+            <label>Data Previsão de Fim </label>
+            <input type="text" class="form-control" id="dataPrevisao"
+                [(ngModel)] = "projeto.dataPrevisao" name = "dataPrevisao">
+        </div>
+    
+        <div class="form-group">
+            <label>Data Fim Real </label>
+            <input type="text" class="form-control" id="dataReal"
+                [(ngModel)] = "projeto.dataReal" name = "dataReal">
+        </div>
+    
+        <div class="form-group">
+            <label>Descrição </label>
+            <input type="text" class="form-control" id="descricao"
+                [(ngModel)] = "projeto.descricao" name = "descricao">
+        </div>
+    
+        <div class="form-group">
+            <label>Status </label>
+            <input type="text" class="form-control" id="status"
+                [(ngModel)] = "projeto.status" name = "status">
+        </div>
+    
+        <div class="form-group">
+            <label>Orçamento </label>
+            <input type="text" class="form-control" id="orcamento"
+                [(ngModel)] = "projeto.orcamento" name = "orcamento">
+        </div>
+    
+        <button class="btn btn-success" style="margin-top:20px;" type="submit">Atualizar</button>
+    </form>
+    </div>

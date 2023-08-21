@@ -1,0 +1,33 @@
+<h2> Lista de Projetos</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Responsável</th>
+            <th>Descrição</th>
+            <th>Data de Início</th>
+            <th>Data Final (previsão)</th>
+            <th>Data Final (real)</th>
+            <th>Status</th>
+            <th>Orçamento</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let projeto of projetos">
+            <td> {{ projeto.nome }} </td>
+            <td> {{ projeto.responsavel }} </td>
+            <td> {{ projeto.descricao }} </td>
+            <td> {{ projeto.dataInicio }} </td>
+            <td> {{ projeto.dataPrevisao }} </td>
+            <td> {{ projeto.dataReal }} </td>
+            <td> {{ projeto.status }} </td>
+            <td> {{ projeto.orcamento }} </td>
+            <td>
+                <button (click) = "updateProject(projeto.id)" class="btn btn-info"> Atualizar</button>
+                <button (click) = "deleteProject(projeto.id)" class="btn btn-danger" style="margin-left: 10px"> Deletar</button>
+                <button (click) = "projectDetails(projeto.id)" class="btn btn-warning" style="margin-left: 10px"> Ver</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
