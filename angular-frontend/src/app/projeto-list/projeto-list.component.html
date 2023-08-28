@@ -9,6 +9,7 @@
             <th>Data Final (previsão)</th>
             <th>Data Final (real)</th>
             <th>Status</th>
+            <th>Risco</th>
             <th>Orçamento</th>
             <th>Ações</th>
         </tr>
@@ -22,10 +23,11 @@
             <td> {{ projeto.dataPrevisao }} </td>
             <td> {{ projeto.dataReal }} </td>
             <td> {{ projeto.status }} </td>
+            <td> {{ projeto.risco }} </td>
             <td> {{ projeto.orcamento }} </td>
             <td>
                 <button (click) = "updateProject(projeto.id)" class="btn btn-info"> Atualizar</button>
-                <button (click) = "deleteProject(projeto.id)" class="btn btn-danger" style="margin-left: 10px"> Deletar</button>
+                <button (click) = "deleteProject(projeto.id)" *ngIf="projeto.status != 'Iniciado' && projeto.status != 'Em Andamento' && projeto.status != 'Encerrado'" class="btn btn-danger" style="margin-left: 10px"> Deletar</button>
                 <button (click) = "projectDetails(projeto.id)" class="btn btn-warning" style="margin-left: 10px"> Ver</button>
             </td>
         </tr>

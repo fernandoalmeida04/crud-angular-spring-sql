@@ -39,8 +39,27 @@
     
         <div class="form-group">
             <label>Status </label>
-            <input type="text" class="form-control" id="status"
-                [(ngModel)] = "projeto.status" name = "status">
+            <br>
+            <select [(ngModel)] = "projeto.status" class="form-select" name = "status" matNativeControl required>
+                <option value="Em Análise">Em Análise</option>
+                <option value="Análise Realizada">Análise Realizada</option>
+                <option value="Análise Aprovada">Análise Aprovada</option>
+                <option value="Iniciado">Iniciado</option>
+                <option value="Planejado">Planejado</option>
+                <option value="Em Andamento">Em Andamento</option>
+                <option value="Encerrado">Encerrado</option>
+                <option value="Cancelado">Cancelado</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Risco </label>
+            <br>
+            <select [(ngModel)] = "projeto.risco" class="form-select" name = "risco" matNativeControl required>
+                <option value="Baixo Risco">Baixo Risco</option>
+                <option value="Médio Risco">Médio Risco</option>
+                <option value="Alto Risco">Alto Risco</option>
+            </select>
         </div>
     
         <div class="form-group">

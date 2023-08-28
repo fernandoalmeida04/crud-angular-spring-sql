@@ -61,6 +61,7 @@ public class ProjetosController {
 		projeto.setDataReal(projectDetails.getDataReal());
 		projeto.setOrcamento(projectDetails.getOrcamento());
 		projeto.setStatus(projectDetails.getStatus());
+		projeto.setRisco(projectDetails.getRisco());
 		
 		Projeto updatedProject = projetosRepository.save(projeto);
 		return ResponseEntity.ok(updatedProject);

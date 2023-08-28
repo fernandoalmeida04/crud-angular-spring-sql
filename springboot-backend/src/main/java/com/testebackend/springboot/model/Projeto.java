@@ -32,6 +32,9 @@ public class Projeto {
 	@Column(name = "status")
 	private String status;
 	
+	@Column(name = "risco")
+	private String risco;
+	
 	@Column(name = "data_inicio")
 	private String dataInicio;
 	
@@ -92,6 +95,12 @@ public class Projeto {
 	}
 	public void setStatus(String status) {
 		this.status = status;
+	}
+	public String getRisco() {
+		return risco;
+	}
+	public void setRisco(String risco) {
+		this.risco = risco;
 	}
 	public String getDataInicio() {
 		return dataInicio;

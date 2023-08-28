@@ -5,6 +5,7 @@ export class Projeto {
     responsavel: string;
     descricao: string;
     status: string;
+    risco: string;
     dataInicio: string;
     dataPrevisao: string;
     dataReal: string;
